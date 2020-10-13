@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+
+    defaultConfig {
+        applicationId "com.plantapp"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.0.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-v4:28.+'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:28.+'
+    //Toasty
+    implementation 'com.github.GrenderG:Toasty:1.4.0'
+    //spinner
+    implementation 'com.github.ganfra:material-spinner:2.0.0'
+    //Play services
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+    //Picasso
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    //Image Commpress
+    implementation 'id.zelory:compressor:2.1.0'
+    //ViewPagerIndicator  and FlipViewpager
+    implementation 'com.github.JakeWharton:ViewPagerIndicator:2.4.1@aar'
+    implementation 'com.wajahatkarim3.easyflipviewpager:easyflipviewpager:1.0.0'
+    //CircleImageView
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:29.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.3.0'
+    implementation 'androidx.navigation:navigation-ui:2.3.0'
+
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.google.firebase:firebase-messaging:19.0.1'
+    implementation 'com.google.android.gms:play-services-maps:16.0.0'
+    implementation 'com.github.stfalcon:smsverifycatcher:0.3.2'
+    //add this dependency
+    implementation 'com.journeyapps:zxing-android-embedded:3.4.0'
+
+    //working in R
+    implementation 'io.github.inflationx:calligraphy3:3.1.1'
+    implementation 'io.github.inflationx:viewpump:2.0.3'
+}
+apply plugin: 'com.google.gms.google-services'

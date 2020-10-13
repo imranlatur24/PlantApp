@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "152513483844",
+    "firebase_url": "https://swack-transport.firebaseio.com",
+    "project_id": "swack-transport",
+    "storage_bucket": "swack-transport.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:152513483844:android:7e0224feb561f9799ed811",
+        "android_client_info": {
+          "package_name": "com.plantapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "152513483844-rnj7dk6up0eifteglh57v62mjiarls3v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1hmeUPrfqolKKeJ0YntftU-TDGMPlil8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "152513483844-rnj7dk6up0eifteglh57v62mjiarls3v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

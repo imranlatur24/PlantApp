@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapse_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:titleEnabled="false">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:orientation="vertical"
+                android:adjustViewBounds="true"
+                app:layout_collapseMode="parallax"
+                android:background="@drawable/side_nav_bar">
+
+
+                <fragment
+                    xmlns:map="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_370sdp"/>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".activity.SupportActivity"
+        android:background="@color/colorWhite"
+        tools:showIn="@layout/support">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.75"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1ssp"
+                android:background="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/txt_support_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:layout_margin="@dimen/_4ssp"
+                android:layout_gravity="center"
+                android:textSize="@dimen/_15ssp"
+                android:drawablePadding="@dimen/_8ssp"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/contact_address">
+
+            </TextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1ssp"
+                android:background="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/txt_support_mobileno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:layout_margin="@dimen/_4ssp"
+                android:layout_gravity="center"
+                android:autoLink="phone"
+                android:drawablePadding="@dimen/_8ssp"
+                android:textColorLink="@color/colorPrimary"
+                android:textSize="@dimen/_16ssp"
+                android:text="@string/contact_phone"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1ssp"
+                android:background="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/txt_support_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:layout_margin="@dimen/_4ssp"
+                android:layout_gravity="center"
+                android:autoLink="email"
+                android:drawablePadding="@dimen/_8ssp"
+                android:textColorLink="@color/colorPrimary"
+                android:textSize="@dimen/_16ssp"
+                android:text="@string/contact_email"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1ssp"
+                android:background="@color/colorPrimary"/>
+
+
+            <TextView
+                android:id="@+id/txt_support_whatsapp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:layout_margin="@dimen/_4ssp"
+                android:layout_gravity="center"
+                android:autoLink="phone"
+                android:drawablePadding="@dimen/_8ssp"
+                android:textColorLink="@color/colorPrimary"
+                android:textSize="@dimen/_16ssp"
+                android:text="@string/contact_web">
+
+            </TextView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1ssp"
+                android:background="@color/colorPrimary"/>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
